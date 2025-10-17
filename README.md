@@ -1,265 +1,70 @@
-# Paltry 🍳
+# Getting Started with Create React App
 
-A modern, intuitive "What's in my fridge?" recipe discovery web application that helps you find delicious recipes based on the ingredients you have available. Built with React and powered by the Spoonacular API.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Paltry Logo](public/Paltry.png)
+## Available Scripts
 
-## 🌟 Features
+In the project directory, you can run:
 
-### Core Functionality
-- **Ingredient Management**: Add and remove ingredients from your virtual pantry
-- **Smart Recipe Discovery**: Find recipes based on available ingredients using AI-powered matching
-- **Real-time Search**: Get instant recipe suggestions as you build your ingredient list
-- **Visual Recipe Cards**: Browse recipes with beautiful images and clear titles
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+### `npm start`
 
-### User Experience
-- **Intuitive Interface**: Clean, modern design with dark theme
-- **Keyboard Support**: Press Enter to add ingredients quickly
-- **One-Click Removal**: Easy ingredient removal with visual feedback
-- **Loading States**: Clear feedback during API calls
-- **Error Handling**: Graceful handling of API errors and edge cases
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Technical Features
-- **React Hooks**: Modern functional components with useState for state management
-- **API Integration**: Seamless integration with Spoonacular Recipe API
-- **Responsive Grid**: CSS Grid layout for optimal recipe card display
-- **Component Architecture**: Modular, reusable component structure
-- **Async Operations**: Proper handling of asynchronous API calls
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## 🚀 Getting Started
+### `npm test`
 
-### Prerequisites
-- Node.js (version 14 or higher)
-- npm or yarn package manager
-- Spoonacular API key (free tier available)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Installation
+### `npm run build`
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/justsubway/paltry.git
-   cd paltry
-   ```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-3. **Get your API key**
-   - Visit [Spoonacular API](https://spoonacular.com/food-api)
-   - Sign up for a free account
-   - Copy your API key
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-4. **Configure the API key**
-   - Open `src/App.js`
-   - Replace `YOUR_API_KEY_HERE` with your actual API key:
-   ```javascript
-   const apiKey = 'your-actual-api-key-here';
-   ```
+### `npm run eject`
 
-5. **Start the development server**
-   ```bash
-   npm start
-   ```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-6. **Open your browser**
-   Navigate to `http://localhost:3000` to view the application
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## 📖 How to Use
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### Adding Ingredients
-1. Type an ingredient name in the input field
-2. Press Enter or click the "Add" button
-3. The ingredient will appear in your pantry list
-4. Repeat for all available ingredients
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### Finding Recipes
-1. Add 2-5 ingredients to your pantry
-2. Click the "Find Recipes" button
-3. Browse through the suggested recipes
-4. Each recipe card shows an image and title
+## Learn More
 
-### Managing Your Pantry
-- **Remove ingredients**: Click the "X" button next to any ingredient
-- **Add more ingredients**: Continue adding ingredients to refine your search
-- **Clear and start over**: Remove all ingredients to start fresh
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## 🏗️ Project Structure
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-```
-paltry/
-├── public/
-│   ├── index.html
-│   ├── Paltry.png          # Application logo
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Button.js       # Reusable button component
-│   ├── App.js              # Main application component
-│   ├── App.css             # Application styling
-│   ├── App.test.js         # Component tests
-│   ├── index.js            # React app entry point
-│   ├── index.css           # Global styles
-│   └── setupTests.js       # Test configuration
-├── package.json            # Project dependencies and scripts
-└── README.md              # Project documentation
-```
+### Code Splitting
 
-## 🔧 Technical Implementation
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### State Management
-The application uses React's `useState` hook to manage four key pieces of state:
-- `ingredientsList`: Array of added ingredients
-- `typedText`: Current input value
-- `recipesList`: Array of fetched recipes
-- `isLoading`: Loading state for API calls
+### Analyzing the Bundle Size
 
-### API Integration
-- **Endpoint**: Spoonacular's `findByIngredients` API
-- **Method**: GET request with ingredients as query parameters
-- **Response**: Array of recipe objects with images and titles
-- **Error Handling**: Graceful fallback for API failures
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Component Architecture
-- **App Component**: Main container with all application logic
-- **Button Component**: Reusable button with customizable styling
-- **CSS Grid**: Responsive layout for recipe cards
-- **Flexbox**: Layout for ingredient management
+### Making a Progressive Web App
 
-## 🎨 Styling and Design
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Color Scheme
-- **Background**: Dark theme (#282c34)
-- **Cards**: Medium gray (#3a404a)
-- **Accents**: Blue (#61dafb) and Green (#28a745)
-- **Text**: White with good contrast
+### Advanced Configuration
 
-### Layout
-- **Responsive Grid**: Recipe cards adapt to screen size
-- **Centered Design**: Clean, focused layout
-- **Card-based UI**: Modern card design for ingredients and recipes
-- **Visual Hierarchy**: Clear distinction between sections
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-## 📱 Browser Support
+### Deployment
 
-This application is compatible with all modern browsers:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-## 🚀 Available Scripts
+### `npm run build` fails to minify
 
-- `npm start`: Runs the app in development mode
-- `npm build`: Builds the app for production
-- `npm test`: Launches the test runner
-- `npm eject`: Ejects from Create React App (one-way operation)
-
-## 🔑 API Configuration
-
-### Spoonacular API Setup
-1. Visit [Spoonacular Food API](https://spoonacular.com/food-api)
-2. Sign up for a free account (150 requests per day)
-3. Copy your API key from the dashboard
-4. Replace the placeholder in `src/App.js`
-
-### API Rate Limits
-- **Free Tier**: 150 requests per day
-- **Paid Tiers**: Higher limits available
-- **Best Practice**: Implement caching for production use
-
-## 🛠️ Development
-
-### Adding New Features
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Test thoroughly
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
-
-### Code Style
-- Follow React best practices
-- Use functional components with hooks
-- Maintain consistent naming conventions
-- Add comments for complex logic
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**API Key Not Working**
-- Verify your API key is correct
-- Check if you've exceeded rate limits
-- Ensure the key is properly placed in the code
-
-**No Recipes Found**
-- Try adding more ingredients
-- Check ingredient spelling
-- Verify API key is working
-
-**Build Errors**
-- Clear node_modules and reinstall: `rm -rf node_modules && npm install`
-- Check Node.js version compatibility
-- Verify all dependencies are installed
-
-## 🚀 Deployment
-
-### Production Build
-```bash
-npm run build
-```
-
-### Deployment Options
-- **Netlify**: Drag and drop the build folder
-- **Vercel**: Connect your GitHub repository
-- **GitHub Pages**: Use the build folder
-- **AWS S3**: Upload build files to S3 bucket
-
-## 🔮 Future Enhancements
-
-Potential improvements for future versions:
-- **Recipe Details**: Full recipe instructions and ingredients
-- **Nutritional Information**: Calories, macros, and dietary info
-- **User Accounts**: Save favorite recipes and ingredient lists
-- **Shopping Lists**: Generate shopping lists for missing ingredients
-- **Dietary Filters**: Vegetarian, vegan, gluten-free options
-- **Recipe Ratings**: User ratings and reviews
-- **Meal Planning**: Weekly meal planning features
-- **Offline Support**: PWA capabilities for offline use
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- [Spoonacular API](https://spoonacular.com/food-api) for providing the recipe data
-- [React](https://reactjs.org/) for the amazing framework
-- [Create React App](https://create-react-app.dev/) for the project setup
-
-## 📞 Support
-
-For questions, suggestions, or support:
-- Open an issue on GitHub
-- Contact the maintainer
-- Check the documentation
-
----
-
-**Built with ❤️ using React and the Spoonacular API**
-
-*Turn your pantry into possibilities with Paltry!*
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
